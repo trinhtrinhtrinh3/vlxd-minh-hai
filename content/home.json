@@ -1,0 +1,41 @@
+{
+  "videos": [
+    {
+      "title": "Giới thiệu VLXD Minh Hải – Video có giọng đọc",
+      "description": "Video giới thiệu cửa hàng, san lấp mặt bằng, xe ben và vật liệu xây dựng; giọng đọc tiếng Việt, hình ảnh AI minh họa.",
+      "video": "/uploads/video-minh-hai-khong-cat-anh.mp4",
+      "poster": "/cua-hang-minh-hai.webp",
+      "featured": true
+    }
+  ],
+  "posts": [
+    {
+      "title": "Minh Hải – Cung cấp đất san lấp giá sỉ và lẻ",
+      "date": "2026-11-06",
+      "image": "/xe-ben.webp",
+      "body": "VẬT LIỆU XÂY DỰNG MINH HẢI – CHUYÊN CUNG CẤP ĐẤT ĐỂ SAN LẤP VỚI GIÁ SỈ VÀ LẺ\n\nChúng tôi nhận cung cấp và vận chuyển đất san lấp số lượng lớn và nhỏ, phục vụ cả ngày lẫn đêm, đáp ứng nhanh những công trình cần đất gấp.\n\nĐất có hóa đơn, chứng từ hợp pháp, đảm bảo điều kiện vận chuyển và lưu thông theo quy định.\n\nCam kết chịu trách nhiệm về tính pháp lý của nguồn đất, minh bạch về nguồn gốc và chứng từ.\n\nBán sỉ và bán lẻ trực tiếp tại bãi. Quý khách có xe vận chuyển riêng có thể đến lấy đất theo nhu cầu.\n\nNhận giao đất tận công trình, linh hoạt theo số lượng và thời gian yêu cầu.\n\nVẬT LIỆU XÂY DỰNG MINH HẢI – NGUỒN ĐẤT RÕ RÀNG, GIAO HÀNG LINH HOẠT, HỢP TÁC UY TÍN!\n\nLIÊN HỆ SỐ Hotline: 0367 071 061. NHÉ CẢ NHÀ MÌNH ƠI",
+      "published": true
+    },
+    {
+      "title": "Minh Hải nhận cung cấp đất san lấp sỉ và lẻ",
+      "date": "2026-11-06",
+      "image": "/san-lap.webp",
+      "body": "Vật liệu xây dựng Minh Hải tiếp nhận nhu cầu cung cấp và vận chuyển đất san lấp với số lượng lớn, nhỏ. Quý khách có xe riêng có thể liên hệ trao đổi phương án lấy đất tại bãi. Với đơn hàng cần giao tới công trình, Minh Hải tư vấn theo vị trí, khối lượng và thời gian yêu cầu.\n\nLiên hệ 0367 071 061 để xác nhận nguồn hàng, giá và lịch phục vụ.",
+      "published": true
+    },
+    {
+      "title": "Trao đổi về chứng từ và nguồn gốc đất san lấp",
+      "date": "2026-11-06",
+      "image": "/xe-ben.webp",
+      "body": "Khi đặt đất san lấp, khách hàng có thể liên hệ trước để trao đổi về loại đất, nguồn gốc, hóa đơn và các chứng từ cần thiết cho vận chuyển theo quy định. Minh Hải cung cấp thông tin theo từng giao dịch thực tế.\n\nHotline 0367 071 061.",
+      "published": true
+    },
+    {
+      "title": "Vật liệu xây dựng cho công trình",
+      "date": "2026-11-06",
+      "image": "/vat-lieu.webp",
+      "body": "Cần cát, đá, gạch, xi măng, sắt thép hay vật liệu phục vụ thi công? Hãy gọi Minh Hải để kiểm tra mặt hàng đang có, số lượng và báo giá phù hợp.\n\nKhu vực Đạ Tẻh, Lâm Đồng. Điện thoại 0367 071 061.",
+      "published": true
+    }
+  ]
+}

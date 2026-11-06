@@ -1,0 +1,41 @@
+# Quan trọng: thay TEN_GITHUB_CUA_BAN/TEN_KHO_CODE bằng kho GitHub thật của bạn.
+# Cần kết nối repo với Netlify và cấu hình GitHub OAuth trước khi đăng nhập.
+backend:
+  name: github
+  repo: TEN_GITHUB_CUA_BAN/TEN_KHO_CODE
+  branch: main
+
+locale: vi
+media_folder: uploads
+public_folder: /uploads
+publish: true
+
+collections:
+  - name: "trang_chu"
+    label: "Nội dung trang chủ"
+    files:
+      - label: "Quản lý Video và Bài viết"
+        name: "noi_dung"
+        file: "content/home.json"
+        format: "json"
+        fields:
+          - label: "Video trên trang chủ"
+            name: "videos"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Tiêu đề video", name: "title", widget: "string"}
+              - {label: "Mô tả video", name: "description", widget: "text", required: false}
+              - {label: "File MP4 (nên dưới 25 MB)", name: "video", widget: "file", allow_multiple: false}
+              - {label: "Ảnh đại diện video", name: "poster", widget: "image", required: false}
+              - {label: "Là video nổi bật", name: "featured", widget: "boolean", default: false}
+          - label: "Bài viết mới nhất"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Tiêu đề bài", name: "title", widget: "string"}
+              - {label: "Ngày đăng", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false}
+              - {label: "Ảnh đại diện", name: "image", widget: "image", required: false}
+              - {label: "Nội dung bài", name: "body", widget: "text"}
+              - {label: "Hiển thị công khai", name: "published", widget: "boolean", default: true}

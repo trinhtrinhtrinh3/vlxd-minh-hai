@@ -1,0 +1,32 @@
+HƯỚNG DẪN TỰ ĐĂNG BÀI VÀ VIDEO – VLXD MINH HẢI
+==================================================
+
+1. TỆP ĐÃ CHUẨN BỊ
+- index.html: trang chủ có video + bài viết HIỆN TRỰC TIẾP, không phải nhấp vào menu.
+- content/home.json: nội dung và danh sách video/bài viết.
+- admin/index.html + admin/config.yml: bảng quản lý Decap CMS.
+- uploads/: 5 video mẫu có nhạc nền (CHƯA có lời đọc riêng) + nơi chứa file tải lên.
+
+2. KIỂM TRA GIAO DIỆN NGAY
+- Vào dự án vlxd-minh-hai > Deploys của Netlify.
+- Tải ZIP này vào DỰ ÁN HIỆN CÓ, không tạo website mới.
+- Mở https://vlxd-minh-hai.netlify.app và kiểm tra khối Video & Bài viết.
+- Điều này CHỈ cập nhật giao diện; KHÔNG tự kích hoạt quyền quản lý.
+
+3. ĐỂ TỰ ĐĂNG BÀI THẬT SỰ (LÀM MỘT LẦN)
+- Tạo tài khoản GitHub miễn phí tại https://github.com nếu chưa có.
+- Tạo một REPOSITORY (kho mã nguồn) cho website Minh Hải (chọn private nếu dùng khả năng kết nối phù hợp).
+- Đưa toàn bộ file trong ZIP vào gốc repository. GitHub có thể từ chối file >100MB.
+- Mở admin/config.yml; sửa `repo: TEN_GITHUB_CUA_BAN/TEN_KHO_CODE` bằng tên tài khoản và repo thật (VD: tenban/vlxd-minh-hai). Branch: main.
+- Kết nối chính repository đó vào DỰ ÁN `vlxd-minh-hai` đang có trên Netlify để mỗi lần chỉnh trong CMS, Netlify tự xuất bản. Không tạo dự án mới; dùng liên kết repo trong phần cấu hình hiện có (nếu giao diện tài khoản hỗ trợ).
+- Thiết lập GitHub OAuth cho Decap CMS như hướng dẫn chính thức tại:
+  https://decapcms.org/docs/github-backend/
+  https://decapcms.org/docs/docusaurus/
+  GitHub OAuth App: Callback URL https://api.netlify.com/auth/done
+  Netlify: Project configuration > Access & security > OAuth > Authentication providers.
+- Sau đó mở https://vlxd-minh-hai.netlify.app/admin/ để đăng nhập GitHub; chọn "Quản lý Video và Bài viết" > chỉnh sửa > Publish.
+
+LƯU Ý: Chỉ tải ZIP lên Netlify không đủ để CMS đăng nhập và đăng bài. Cần GitHub repository + kết nối deploy + xác thực OAuth.
+KHÔNG đăng Client Secret lên website công khai. Điền OAuth client secret CHỈ vào giao diện quản lý Netlify.
+Video upload có thể làm kho GitHub phình nhanh. Nên nén MP4 nhỏ và sử dụng YouTube cho các video dài (trường video đang nhận file MP4; có thể mở rộng hỗ trợ URL YouTube sau).
+Nội dung hóa đơn, nguồn gốc đất, xe, công trình chỉ đăng khi đúng thực tế. Ảnh hiện tại minh họa bằng AI.

@@ -2,7 +2,7 @@
 # Cần kết nối repo với Netlify và cấu hình GitHub OAuth trước khi đăng nhập.
 backend:
   name: github
-  repo: repo: trinhtrinhtrinh3/vlxd-minh-hai
+  repo: trinhtrinhtrinh3/vlxd-minh-hai
   branch: main
 
 locale: vi

@@ -6,6 +6,11 @@
       "video": "/uploads/video-minh-hai-khong-cat-anh.mp4",
       "poster": "/cua-hang-minh-hai.webp",
       "featured": true
+    },
+    {
+      "featured": false,
+      "video": "/uploads/vlxd-minh-hai-video-san-lap-co-giong.mp4",
+      "title": "CUNG CẤP ĐẤT TẬN NƠI VÀ TẠI CHỖ"
     }
   ],
   "posts": [

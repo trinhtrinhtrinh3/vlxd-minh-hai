@@ -18,7 +18,7 @@
 .video-intro p{margin:0;color:#d8e7e8}
 .video-shell{background:#081e26;display:grid;place-items:center;min-height:340px}
 .video-shell video{display:block;max-height:560px;width:100%;height:100%;object-fit:contain;background:#081e26}
-.media-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:23px}
+.media-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:24px}.media-grid .video-feature{width:100%}.media-grid .video-intro{min-width:0}
 .video-card,.post-card{border-radius:16px;background:#fff;overflow:hidden;border:1px solid #dce5e7;box-shadow:0 12px 26px #10303a0c}
 .video-card video{display:block;background:#102b34;width:100%;aspect-ratio:4/5;object-fit:contain}
 .video-card .card-pad,.post-card .card-pad{padding:17px 19px 19px}
@@ -36,7 +36,7 @@
 .post-card .body-text{white-space:pre-line;line-height:1.7;color:#4b636a;font-size:15px;margin-top:10px}
 #video-cards:empty,#post-cards:empty{display:none}
 .load-note{padding:18px;background:#f5f8f8;border-radius:12px}
-@media(max-width:940px){.video-feature{grid-template-columns:1fr}.media-grid{grid-template-columns:repeat(2,1fr)}.post-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:940px){.video-feature{grid-template-columns:1fr} .media-grid{grid-template-columns:1fr}.post-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.post-grid>.post-card:first-child{grid-template-columns:1fr}.post-grid>.post-card:first-child img{height:auto;min-height:0;max-height:320px;object-fit:contain}}
 @media(max-width:620px){.media-section,.posts-section{padding:44px 0}.video-feature .video-intro{padding:25px}.video-shell{min-height:310px}.media-grid,.post-grid{grid-template-columns:1fr}.video-card video{aspect-ratio:16/11}.video-shell video{max-height:500px}}
 
@@ -73,7 +73,15 @@
   function mk(tag, cls, text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=String(text);return e}
   function safeUrl(x){if(typeof x!== 'string')return '';const s=x.trim();if(s.startsWith('/')&&!s.startsWith('//'))return s;if(/^https:\/\//i.test(s))return s;return '';}
   function vid(v){const x=mk('video');x.controls=true;x.playsInline=true;x.preload='metadata';x.src=safeUrl(v.video);if(v.poster)x.poster=safeUrl(v.poster);return x;}
-  function videoCard(v){const a=mk('article','video-card');a.appendChild(vid(v));const b=mk('div','card-pad');b.append(mk('h3','',v.title),mk('p','',v.description||''));a.appendChild(b);return a;}
+  function videoCard(v){
+    const a=mk('article','video-feature');
+    const intro=mk('div','video-intro');
+    intro.append(mk('span','section-eyebrow','VIDEO MINH HẢI'),mk('h3','',v.title));
+    if(v.description)intro.appendChild(mk('p','',v.description));
+    const call=mk('a','btn','☎ Gọi để nhận báo giá');call.href='tel:0367071061';intro.appendChild(call);
+    const shell=mk('div','video-shell');shell.appendChild(vid(v));
+    a.append(intro,shell);return a;
+  }
   function postCard(p){const a=mk('article','post-card');const src=safeUrl(p.image);if(src){const im=mk('img');im.loading='lazy';im.src=src;im.alt='Hình minh họa bài viết '+p.title;a.appendChild(im)}const b=mk('div','card-pad');let date='';if(p.date){date=String(p.date).substring(0,10).split('-').reverse().join('/')}b.append(mk('time','',date),mk('h3','',p.title));
     if(String(p.title||'').includes('Cung cấp đất san lấp giá sỉ và lẻ')){
       const wrap=mk('div','post-benefits');const chunks=String(p.body||'').split(/\n\s*\n/).map(t=>t.trim()).filter(Boolean);

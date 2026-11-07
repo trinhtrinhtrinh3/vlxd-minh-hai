@@ -8,9 +8,14 @@
       "featured": false
     },
     {
-      "featured": true,
+      "featured": false,
       "video": "/uploads/vlxd-minh-hai-video-san-lap-co-giong.mp4",
       "title": "CUNG CẤP ĐẤT TẬN NƠI VÀ TẠI CHỖ"
+    },
+    {
+      "featured": true,
+      "video": "/uploads/minh-hai-san-lap-video-giong-viet-moi.mp4",
+      "title": "NHẬN SAN LẤP MẶT BẰNG - THI CÔNG CÔNG TRÌNH SAN LẤP - AI CÓ XE THÌ TỚI BÃI LẤY ĐẤT"
     }
   ],
   "posts": [
